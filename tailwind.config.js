@@ -21,6 +21,12 @@ module.exports = {
 				'meat-blue': '#009CD9',
 				'meat-red': '#B72C2C',
 			},
+			backgroundImage: {
+				brush: 'url("/assets/img/brush.png")',
+			},
+			dropShadow: {
+				'meat-shadow': '0px 4px 40px rgba(0, 0, 0, 0.07)',
+			},
 		},
 	},
 	plugins: [],

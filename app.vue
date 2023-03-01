@@ -1,3 +1,7 @@
+<script setup>
+import ArticleCard from "./components/ArticleCard";
+</script>
+
 <template>
   <Html lang="es">
     <Head>
@@ -12,7 +16,7 @@
     </Head>
   </Html>
 
-  <div class="relative h-[25rem] xl:h-screen">
+  <div class="relative h-[400px] xl:h-screen">
     <header
       class="flex flex-col items-center justify-between gap-4 xl:gap-0 md:px-32 md:flex-row pt-5 md:pt-10"
     >
@@ -52,4 +56,40 @@
       />
     </div>
   </div>
+
+  <main class="md:px-32">
+    <section>
+      <div class="flex flex-col items-center md:w-[640px] mx-auto mt-10 mb-20">
+        <h2
+          class="font-caveat font-bold text-meat-gray text-4xl md:text-8xl text-center relative after:content-[' '] after:bg-brush after:absolute after:left-0 after:bottom-[-35px] after:w-full after:h-20 after:bg-cover after:opacity-20"
+        >
+          Nuestros articulos
+        </h2>
+      </div>
+
+      <div
+        class="flex justify-center flex-col items-center md:flex-row md:items-start gap-4"
+      >
+        <div
+          class="flex flex-col flex-4 md:w-[500px] max-w-[268px] items-start gap-8 p-7 bg-white drop-shadow-meat-shadow rounded-xl"
+        >
+          <button>TODOS</button>
+          <button>PRODUCTOS</button>
+          <button>RECETAS</button>
+          <button>CONSEJOS</button>
+        </div>
+
+        <div
+          class="flex flex-1 gap-8 flex-wrap max-w-[1200px] justify-center md:justify-start"
+        >
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+        </div>
+      </div>
+    </section>
+  </main>
 </template>
