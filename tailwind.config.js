@@ -9,7 +9,19 @@ module.exports = {
 		'./app.vue',
 	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				caveat: ['Caveat', 'cursive'],
+				'open-sans': ['Open Sans', 'sans-serif'],
+			},
+			colors: {
+				'meat-black': '#24272A',
+				'meat-gray': '#3F454A',
+				'meat-yellow': '#D8AD3D',
+				'meat-blue': '#009CD9',
+				'meat-red': '#B72C2C',
+			},
+		},
 	},
 	plugins: [],
 }
