@@ -1,5 +1,4 @@
 <script setup>
-import ArticleCard from "./components/ArticleCard";
 </script>
 
 <template>
@@ -40,7 +39,7 @@ import ArticleCard from "./components/ArticleCard";
     </header>
 
     <div class="absolute top-0 h-full w-full -z-10">
-      <img src="~/assets/img/hero.png" class="w-full" alt="Hero image" />
+      <img src="~/assets/img/hero.png" class="w-full h-full" alt="Hero image" />
     </div>
 
     <div class="absolute w-full bottom-[35%] px-5 md:px-32">
@@ -59,7 +58,9 @@ import ArticleCard from "./components/ArticleCard";
 
   <main class="md:px-32 mb-10">
     <section>
-      <div class="flex flex-col items-center md:w-[640px] mx-auto mt-10 mb-20">
+      <div
+        class="flex flex-col items-center lg:w-[640px] mx-auto mt-10 mb-10 lg:mb-20"
+      >
         <h2
           class="font-caveat font-bold text-meat-gray text-4xl md:text-8xl text-center relative after:content-[' '] after:bg-brush after:absolute after:left-0 after:bottom-[-35px] after:w-full after:h-20 after:bg-cover after:opacity-20"
         >
@@ -67,33 +68,13 @@ import ArticleCard from "./components/ArticleCard";
         </h2>
       </div>
 
-      <div
-        class="flex justify-center flex-col items-center md:flex-row md:items-start gap-4"
-      >
-        <div
-          class="flex flex-col flex-4 md:w-[500px] max-w-[268px] items-start gap-8 p-7 bg-white drop-shadow-meat-shadow rounded-xl"
-        >
-          <button>TODOS</button>
-          <button>PRODUCTOS</button>
-          <button>RECETAS</button>
-          <button>CONSEJOS</button>
-        </div>
-
-        <div
-          class="flex flex-1 gap-8 flex-wrap max-w-[1200px] justify-center md:justify-start"
-        >
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-        </div>
-      </div>
+      <ArticleSection />
     </section>
 
     <section>
-      <div class="flex flex-col items-center md:w-[640px] mx-auto mt-10 mb-12">
+      <div
+        class="flex flex-col items-center lg:w-[640px] mx-auto mt-10 mb-10 lg:mb-12"
+      >
         <h2
           class="font-caveat font-bold text-meat-gray text-4xl md:text-8xl text-center relative after:content-[' '] after:bg-brush after:absolute after:left-0 after:bottom-[-35px] after:w-full after:h-20 after:bg-cover after:opacity-20"
         >
@@ -102,7 +83,7 @@ import ArticleCard from "./components/ArticleCard";
       </div>
 
       <form class="max-w-[720px] mx-auto">
-        <div class="flex flex-wrap gap-5 justify-between">
+        <div class="flex flex-wrap gap-5 justify-center lg:justify-between">
           <div>
             <label class="font-bold font-open-sans text-xs" for="name"
               >NOMBRE</label
@@ -154,7 +135,7 @@ import ArticleCard from "./components/ArticleCard";
         </div>
 
         <button
-          class="block ml-auto mt-8 rounded-full bg-meat-yellow px-12 py-4 text-sm font-bold font-open-sans text-white hover:bg-meat-blue disabled:bg-[#CFCFCF]"
+          class="block mx-auto lg:mx-0 lg:ml-auto mt-8 rounded-full bg-meat-yellow px-12 py-4 text-sm font-bold font-open-sans text-white hover:bg-meat-blue disabled:bg-[#CFCFCF]"
         >
           ENVIAR
         </button>
