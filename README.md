@@ -1,6 +1,17 @@
-# Nuxt 3 Minimal Starter
+# Prueba de Desarrollo Front-end
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<div align="center">
+  <h3>   
+    <a href="https://meat-prueba-frontend.vercel.app/">
+        Preview
+    </a>
+  </h3>
+</div>
+
+## Technologies
+
+-   Nuxt 3
+-   TailwindCss
 
 ## Setup
 
@@ -38,5 +49,3 @@ Locally preview production build:
 ```bash
 npm run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
