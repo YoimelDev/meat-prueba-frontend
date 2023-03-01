@@ -30,33 +30,22 @@ const handleFilter = (filter) => {
 </script>
 
 <template>
-  <div
-    class="flex justify-center flex-col items-center md:flex-row md:items-start gap-4"
-  >
+  <div class="flex justify-center flex-col items-center md:flex-row md:items-start gap-4">
     <div
-      class="flex flex-col flex-4 md:w-[500px] max-w-[268px] items-center w-full md:items-start gap-8 p-7 bg-white drop-shadow-meat-shadow rounded-xl"
-    >
-      <button
-        v-for="filter in filters"
-        :key="filter"
-        class="uppercase"
-        :class="{
-          'text-meat-yellow font-bold': isActiveArticle === filter,
-        }"
-        @click="() => handleFilter(filter)"
-      >
+      class="flex flex-col flex-4 md:w-[500px] max-w-[268px] items-center w-full md:items-start gap-8 p-7 bg-white drop-shadow-meat-shadow rounded-xl">
+      <button v-for="filter in filters" :key="filter" class="uppercase flex justify-between items-center w-full" :class="{
+        'text-meat-yellow font-bold': isActiveArticle === filter,
+      }" @click="() => handleFilter(filter)">
         {{ filter }}
+
+        <img src="~/assets/img/Arrow.svg" alt="Arrow Image" v-if="isActiveArticle === filter">
       </button>
+
+
     </div>
 
-    <div
-      class="flex flex-1 gap-8 flex-wrap max-w-[1200px] justify-center md:justify-start"
-    >
-      <ArticleCard
-        v-for="article in articles"
-        :key="article.id"
-        :article="article"
-      />
+    <div class="flex flex-1 gap-8 flex-wrap max-w-[1200px] justify-center md:justify-start">
+      <ArticleCard v-for="article in articles" :key="article.id" :article="article" />
     </div>
   </div>
 </template>
