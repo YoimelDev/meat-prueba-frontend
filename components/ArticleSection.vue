@@ -1,6 +1,4 @@
 <script setup>
-import ArticleCard from "./ArticleCard";
-
 const isActiveArticle = ref("todos");
 const articles = ref([]);
 
